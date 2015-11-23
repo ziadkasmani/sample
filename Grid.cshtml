@@ -1,0 +1,27 @@
+﻿@{ 
+    Layout = null;
+}
+<div data-ng-init="onInit()">
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label class="control-label">Filters by First Name :</label>
+            <input type="text" class="form-control input-sm" ng-model="filterBy.name" />
+        </div>
+    </div>
+    <div tasty-table bind-resource-callback="getResource" bind-init="init" bind-filters="filterBy">
+        <table class="table table-striped table-condensed">
+            <thead tasty-thead>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in rows">
+                    <td>{{ row.Id }}</td>
+                    <td>{{ row.FirstName }}</td>
+                    <td>{{ row.LastName }}</td>
+                    <td>{{ row.Status }}</td>
+                    <td><button>View</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div tasty-pagination></div>
+    </div>
+</div>
