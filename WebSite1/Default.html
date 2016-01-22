@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        ul {
+            text-align: justify;
+            position: relative;
+            overflow: hidden;
+            padding-left: 0px;
+            min-width: 1257px;
+            height: 182px;
+        }
+
+            ul:before, .active:after {
+                content: '';
+                width: 100%;
+                border: 2px solid #21a2d1;
+                position: absolute;
+                top: 90px;
+                z-index: -1;
+            }
+
+        .active:after {
+            border-color: #b7b7b7;
+        }
+
+        ul:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+        }
+
+        li {
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            line-height: 1.7em;
+            border-radius: 50%;
+            background: #21a2d1;
+            margin: 0 1em;
+            display: inline-block;
+            color: white;
+            font-size: 1em;
+            border: 11px solid #f1f1f1;
+        }
+
+        .marker-number {
+            font-size: 14px;
+        }
+
+        li.active {
+            background: #04497b;
+        }
+
+        .active ~ li {
+            background: #b7b7b7;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 2em;
+        }
+
+        span.marker-text {
+            color: #7d7d7d;
+            font-size: 12px;
+            line-height: 16px;
+            width: 70px;
+            display: block;
+            margin-left: 21px;
+            margin-top: -59px;
+            font-style: italic;
+            font-family: Arial;
+        }
+
+        .substage {
+            width: 710px !important;
+            min-width: 710px !important;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><span class="marker-number">1</span> <span class="marker-text">Select Car</span></li>
+            <li><span class="marker-number">2</span> <span class="marker-text">Questions</span></li>
+            <li><span class="marker-number">3</span> <span class="marker-text">Problems</span></li>
+            <li><span class="marker-number">4</span> <span class="marker-text">Inspection</span></li>
+            <li><span class="marker-number">5</span> <span class="marker-text">Solution</span></li>
+            <li><span class="marker-number">6</span> <span class="marker-text">Inspection</span></li>
+            <li><span class="marker-number">7</span> <span class="marker-text">Solution</span></li>
+
+        </ul>
+    </div>
+    <div>
+        <ul class="substage">
+            <li><span class="marker-number">1</span> <span class="marker-text">Select Car</span></li>
+            <li><span class="marker-number">2</span> <span class="marker-text">Questions</span></li>
+            <li><span class="marker-number">3</span> <span class="marker-text">Problems</span></li>
+        </ul>
+    </div>
+</body>
+</html>
